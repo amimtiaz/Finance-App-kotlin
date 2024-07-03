@@ -31,13 +31,15 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:id="@+id/imageView6"
+                        android:id="@+id/backBtn"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="48dp"
                         android:padding="16dp"
-                        app:srcCompat="@drawable/arrow"
-                        tools:layout_editor_absoluteX="16dp"
-                        tools:layout_editor_absoluteY="48dp" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/arrow" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -46,9 +48,9 @@
                         android:text="Monthly Report"
                         android:textColor="@color/white"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-                        app:layout_constraintStart_toEndOf="@+id/imageView6"
-                        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+                        app:layout_constraintBottom_toBottomOf="@+id/backBtn"
+                        app:layout_constraintStart_toEndOf="@+id/backBtn"
+                        app:layout_constraintTop_toTopOf="@+id/backBtn" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -68,6 +70,7 @@
                         android:id="@+id/progress_circular"
                         android:layout_width="175dp"
                         android:layout_height="175dp"
+                        app:cpb_background_progressbar_color="@color/lightGrey"
                         android:layout_marginTop="16dp"
                         app:cpb_background_progressbar_width="15dp"
                         app:cpb_progress="60"
@@ -326,6 +329,7 @@
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/view2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="16dp"

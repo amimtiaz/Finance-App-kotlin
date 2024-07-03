@@ -1,5 +1,6 @@
 package com.imtiaz_acedamy.financeappkotlin.Activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.renderscript.RenderScript
 import android.view.View
@@ -40,8 +41,18 @@ class MainActivity : AppCompatActivity() {
 
         initRecyclerView()
         setBlurEffect()
+        setVariable()
 
 
+    }
+
+    private fun setVariable() {
+       binding.cardBtn.setOnClickListener{
+           startActivity(Intent(
+               this,
+               ReportActivity::class.java
+           ))
+       }
     }
 
     private fun setBlurEffect() {
